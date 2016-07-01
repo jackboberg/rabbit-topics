@@ -1,0 +1,36 @@
+{
+  "name": "@modulus/rabbit-topics",
+  "description": "amqplib wrapper for easier rabbitmq scripting of topics queue",
+  "version": "0.0.0",
+  "author": "Jack Boberg <hello@jackboberg.info>",
+  "bugs": {
+    "url": "https://github.com/onmodulus/rabbit-topics/issues"
+  },
+  "devDependencies": {
+    "@modulus/standard": "0.6.0",
+    "code": "1.5.0",
+    "lab": "6.2.0",
+    "sinon": "1.17.4"
+  },
+  "homepage": "https://github.com/onmodulus/rabbit-topics",
+  "keywords": [
+    "amqp",
+    "amqplib",
+    "queue",
+    "rabbit",
+    "rabbitmq",
+    "topics"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onmodulu/rabbit-topics.git"
+  },
+  "scripts": {
+    "coverage": "lab -r html -o coverage/index.html -r lcov -o coverage/lcov.info",
+    "pretest": "npm run lint",
+    "lint": "mod-standard",
+    "test": "lab -cl"
+  }
+}
