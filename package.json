@@ -32,5 +32,8 @@
     "pretest": "npm run lint",
     "lint": "mod-standard",
     "test": "lab -cl"
+  },
+  "dependencies": {
+    "amqplib": "0.4.2"
   }
 }

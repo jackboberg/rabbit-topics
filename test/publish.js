@@ -6,11 +6,11 @@ const describe = lab.describe;
 const it = lab.it;
 const expect = Code.expect;
 
-const Topics = require('..');
+const Publish = require('../lib/publish');
 
-describe('rabbit-topics', function () {
+describe('Publish', function () {
   it('needs tests', { skip: true }, function (done) {
-    expect(Topics).to.be.a.funcion();
+    expect(Publish).to.be.a.function();
     done();
   });
 });

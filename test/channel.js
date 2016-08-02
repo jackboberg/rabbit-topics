@@ -6,11 +6,11 @@ const describe = lab.describe;
 const it = lab.it;
 const expect = Code.expect;
 
-const Topics = require('..');
+const Channel = require('../lib/channel');
 
-describe('rabbit-topics', function () {
+describe('channel', function () {
   it('needs tests', { skip: true }, function (done) {
-    expect(Topics).to.be.a.funcion();
+    expect(Channel).to.be.a.function();
     done();
   });
 });
