@@ -70,3 +70,5 @@ Contributions welcome! Please read the [contributing guidelines](CONTRIBUTING.md
 ## License
 
 [MIT](LICENSE.md)
+
+[amqplib]: http://www.squaremobius.net/amqp.node/channel_api.html#connect
