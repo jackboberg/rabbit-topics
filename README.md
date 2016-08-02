@@ -20,7 +20,6 @@
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [API](#api)
 - [Contribute](#contribute)
 - [License](#license)
 
@@ -32,13 +31,24 @@ npm install @modulus/rabbit-topics
 
 ## Usage
 
+#### `RabbitTopics(url, [options])`
+
+The exported function takes the same parameters as [`amqplib.connect`][amqplib],
+and returns a object with two exported functions, `publish` and `subscribe`.
+
+#### `Publish(exchange, topic, message, done)`
+
+Sends data to the topic exchange and yeilds
+
 ```js
-const Topics = require('@modulus/rabbit-topics');
+const Topics = require('@modulus/rabbit-topics')(url)
+
+Topics.publish('tasks', 'servo:provision', { message: true }, (err) => {
+  if (err) throw err // unable to publish
+
+  console.log('message delivered')
+})
 ```
-
-## API
-
-> TODO
 
 ## Contribute
 
