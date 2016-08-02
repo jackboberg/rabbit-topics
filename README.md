@@ -50,6 +50,19 @@ Topics.publish('tasks', 'servo:provision', { message: true }, (err) => {
 })
 ```
 
+#### `Subscribe(exchange, topic, worker)`
+
+Consumes matching topic messages on the exchange
+
+```js
+const Topics = require('@modulus/rabbit-topics')(url)
+
+Topics.subscribe('tasks', 'servo:#', (message, done) => {
+  // do work
+  done(null, { result: true })
+})
+```
+
 ## Contribute
 
 Contributions welcome! Please read the [contributing guidelines](CONTRIBUTING.md) first.
