@@ -25,7 +25,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/onmodulu/rabbit-topics.git"
+    "url": "https://github.com/onmodulus/rabbit-topics.git"
   },
   "scripts": {
     "coverage": "lab -r html -o coverage/index.html -r lcov -o coverage/lcov.info",
