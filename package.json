@@ -34,7 +34,6 @@
     "test": "lab -cl"
   },
   "dependencies": {
-    "@modulus/rabbit-channel": "1.0.0",
-    "amqplib": "0.4.2"
+    "@modulus/rabbit-channel": "1.0.0"
   }
 }
