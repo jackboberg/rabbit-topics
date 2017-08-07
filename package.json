@@ -7,7 +7,7 @@
     "url": "https://github.com/jackboberg/rabbit-topics/issues"
   },
   "dependencies": {
-    "@modulus/rabbit-channel": "1.0.0"
+    "@jackrabbit/channel": "^2.0.0"
   },
   "devDependencies": {
     "@modulus/standard": "0.6.0",
