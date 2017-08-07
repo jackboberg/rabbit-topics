@@ -10,10 +10,10 @@
     "@jackrabbit/channel": "^2.0.0"
   },
   "devDependencies": {
-    "code": "1.5.0",
-    "lab": "6.2.0",
-    "sinon": "1.17.4",
-    "standard": "^10.0.3"
+    "lodash.isfunction": "^3.0.8",
+    "standard": "^10.0.3",
+    "tap": "^10.7.1",
+    "testdouble": "^3.2.4"
   },
   "homepage": "https://github.com/jackboberg/rabbit-topics",
   "keywords": [
@@ -31,9 +31,9 @@
     "url": "https://github.com/jackboberg/rabbit-topics.git"
   },
   "scripts": {
-    "coverage": "lab -r html -o coverage/index.html -r lcov -o coverage/lcov.info",
+    "cov": "npm run unit -- --cov --coverage-report=lcov",
     "lint": "standard -v",
-    "pretest": "npm run lint",
-    "test": "lab -cl"
+    "test": "npm run lint && npm run unit",
+    "unit": "tap test/*.js"
   }
 }
