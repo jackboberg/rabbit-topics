@@ -1,16 +1,9 @@
-const Code = require('code');
-const Lab = require('lab');
-const lab = exports.lab = Lab.script();
+const { test } = require('tap')
+const isFunction = require('lodash.isfunction')
 
-const describe = lab.describe;
-const it = lab.it;
-const expect = Code.expect;
+const Publish = require('../lib/publish')
 
-const Publish = require('../lib/publish');
-
-describe('Publish', function () {
-  it('needs tests', { skip: true }, function (done) {
-    expect(Publish).to.be.a.function();
-    done();
-  });
-});
+test('needs tests', { skip: true }, ({ assert, end }) => {
+  assert(isFunction(Publish))
+  end()
+})
