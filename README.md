@@ -1,14 +1,14 @@
-# Rabbit-Topics
+# @jackrabbit/topics
 
 [![npm][npm-image]][npm-url]
 [![travis][travis-image]][travis-url]
 [![standard][standard-image]][standard-url]
 [![standard-readme compliant][standard-readme-image]][standard-readme-url]
 
-[npm-image]: https://img.shields.io/npm/v/@modulus/rabbit-topics.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/@modulus/rabbit-topics
-[travis-image]: https://img.shields.io/travis/onmodulus/rabbit-topics.svg?style=flat-square
-[travis-url]: https://travis-ci.org/onmodulu/rabbit-topics
+[npm-image]: https://img.shields.io/npm/v/@jackrabbit/topics.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/@jackrabbit/topics
+[travis-image]: https://img.shields.io/travis/jackboberg/rabbit-topics/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/jackboberg/rabbit-topics
 [standard-image]: https://img.shields.io/badge/code%20style-mod--standard-green.svg?style=flat-square
 [standard-url]: http://npm.im/@modulus/standard
 [standard-readme-image]: https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square
@@ -26,38 +26,38 @@
 ## Installation
 
 ```sh
-npm install @modulus/rabbit-topics
+npm install @jackrabbit/topics
 ```
 
 ## Usage
 
-#### `RabbitTopics(url, [options])`
+#### `topics(url, [options])`
 
 The exported function takes the same parameters as [`amqplib.connect`][amqplib],
 and returns a object with two exported functions, `publish` and `subscribe`.
 
-#### `Publish(exchange, topic, message, done)`
+#### `publish(exchange, topic, message, done)`
 
 Sends data to the topic exchange and yeilds
 
 ```js
-const Topics = require('@modulus/rabbit-topics')(url)
+const { publish } = require('@jackrabbit/topics')(url)
 
-Topics.publish('tasks', 'servo.provision', { message: true }, (err) => {
+publish('tasks', 'servo.provision', { message: true }, (err) => {
   if (err) throw err // unable to publish
 
   console.log('message delivered')
 })
 ```
 
-#### `Subscribe(exchange, topic, worker)`
+#### `subscribe(exchange, topic, worker)`
 
 Consumes matching topic messages on the exchange
 
 ```js
-const Topics = require('@modulus/rabbit-topics')(url)
+const { subscribe } = require('@jackrabbit/topics')(url)
 
-Topics.subscribe('tasks', 'servo.#', (message, done) => {
+subscribe('tasks', 'servo.#', (message, done) => {
   // do work
   done(null, { result: true })
 })
