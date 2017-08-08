@@ -1,7 +1,7 @@
 {
   "name": "@jackrabbit/topics",
   "description": "amqplib wrapper for easier rabbitmq scripting of topics queue",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Jack Boberg <hello@jackboberg.info>",
   "bugs": {
     "url": "https://github.com/jackboberg/rabbit-topics/issues"
