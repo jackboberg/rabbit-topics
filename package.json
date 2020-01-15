@@ -12,7 +12,7 @@
   "devDependencies": {
     "lodash.isfunction": "^3.0.8",
     "standard": "^10.0.3",
-    "tap": "^10.7.1",
+    "tap": "^14.10.6",
     "testdouble": "^3.2.4"
   },
   "homepage": "https://github.com/jackboberg/rabbit-topics",
